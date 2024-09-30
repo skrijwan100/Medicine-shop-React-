@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function Login() {
+export default function Login(props) {
+    const{showAlert}=props
     const navigate= useNavigate()
     const [userauth,setuserauth]=useState({email:"",password:""})
 
@@ -16,7 +17,7 @@ export default function Login() {
        const responce = await fetch(url,{
         method:'POST',
         headers:{
-            "Content-Type":" application/json"
+            "Content-Type":"application/json"
         },
         body:JSON.stringify({email:userauth.email,password:userauth.password})
        })
@@ -24,11 +25,12 @@ export default function Login() {
        console.log(data)
        if(data.massage=="Successfully"){
         localStorage.setItem('auth-token',data.authtoken)
+        showAlert("Login Successfully","success")
         navigate("/")
 
        }
        else{
-        alert(data.massage)
+        showAlert(`${data.massage}`,"error")
        }
 
     }
@@ -37,7 +39,7 @@ export default function Login() {
     <div className="main" style={{display:"flex",flexDirection:"column",color:"#00ff00",height: "350px"}}>
         <h1><center>Login</center></h1>
         <form onSubmit={handleclick}>
-            <div className="user my-2">
+            <div className=" my-2">
                 <input type="email" className='inputsize' style={{outline:"none"}} value={setuserauth.email} onChange={onchange} placeholder="email" id="name" name="email" required />
                 <lord-icon
                             src="https://cdn.lordicon.com/ozlkyfxg.json"

@@ -1,0 +1,8 @@
+@media (max-width: 430px) {
+    .main{
+        width: 95vw;
+    }
+    .inputstyle{
+        width: 90vw !important;
+    }
+  }
