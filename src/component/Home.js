@@ -11,6 +11,7 @@ import facewash from "../Asset/facewash.jpg"
 import gelusil from "../Asset/gelusil.jpg"
 import pad40 from "../Asset/pad-40.jpg"
 import parasitamol from "../Asset/parasitamol.jpg"
+import Product from './Product';
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
           <input className='inputstyle' style={{ width: "35vw", height: "40px" }} type="text" placeholder='Scarch any medicine' />
         </form>
       </div>
+      <Product/>
     </>
   )
 }

@@ -12,7 +12,7 @@ import Login from './component/Login';
 import Loder from './component/Loder';
 import { useState } from 'react';
 import Alert from './component/Alert';
-import "./media.css"
+import "./media.css";
 import Modal from './component/Modal';
 
 function App() {

@@ -112,3 +112,12 @@ body::-webkit-scrollbar-thumb {
   color: #00ff2c !important;
   box-shadow: 1px 1px 4px 3px green;
 }
+
+.hovercard{
+  transition: all 0.7s ease-in-out;
+
+}
+.hovercard:hover{
+  transform: scale(1.08);
+
+}

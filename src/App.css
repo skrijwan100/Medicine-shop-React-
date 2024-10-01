@@ -23,3 +23,7 @@
     border-radius: 50%;
     padding: 9px;
 }
+
+.cardsize{
+    width: 26.333333% !important;
+}

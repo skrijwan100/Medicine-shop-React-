@@ -96,7 +96,7 @@ export default function Singup(props) {
 
                     </div>
                     <div className="login" style={{ display: "flex", justifyContent: "center" }}>
-                        <button className='btn btn-primary' type="submit" >Login</button>
+                        <button className='btn btn-primary' type="submit" >Singup</button>
                     </div>
                 </form>
 

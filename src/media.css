@@ -6,3 +6,8 @@
         width: 90vw !important;
     }
   }
+  @media (max-width: 1130px) {
+     .cardsize{
+        width: 24.3333% !important;
+     }
+  }
