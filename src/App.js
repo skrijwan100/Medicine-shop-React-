@@ -60,12 +60,21 @@ function App() {
         <Loder isLoading={isLoading} progress={progress}/>
         <Alert alert={alert}/>
         <Modal modal={modal}/>
+   
+
     <div className='headbox  d-flex justify-content-center rounded-4 border border-black border-2 '>
       <Header/>
     </div>
+  
+    <div  className='navbar'>
     <Navbar startLoader={startLoader} showAlert={showAlert} showmodal={showmodal} />
+    
+    </div >
+       
+    <div className="content">
+
         <Routes>
-        <Route path="/" element={<Home startLoader={startLoader}/>} />
+        <Route path="/" element={<Home startLoader={startLoader}  showAlert={showAlert} />} />
         <Route path="/about" element={<About startLoader={startLoader}/>} />
         <Route path="/offer" element={<Offer  startLoader={startLoader}/>} />
         <Route path="/onlineservice" element={<Onlinedoctor startLoader={startLoader} showAlert={showAlert}/>} />
@@ -75,6 +84,7 @@ function App() {
 
         
         </Routes>
+    </div>
       </Router>
       </>
   );

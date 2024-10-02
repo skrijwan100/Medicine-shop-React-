@@ -8,6 +8,7 @@ export default function Cart({showAlert}) {
       navigate("/login")
       showAlert("login or singup frist","error")
     }
+    
 
   },[])
  

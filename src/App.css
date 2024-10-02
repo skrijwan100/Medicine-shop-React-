@@ -25,5 +25,6 @@
 }
 
 .cardsize{
-    width: 26.333333% !important;
+    /* width: 26.333333% !important; */
+    padding-left: 50px;
 }

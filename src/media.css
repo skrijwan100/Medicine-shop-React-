@@ -6,8 +6,16 @@
         width: 90vw !important;
     }
   }
-  @media (max-width: 1130px) {
+  @media (max-width: 890px) {
      .cardsize{
-        width: 24.3333% !important;
+        margin-left: 15px ;
+        margin-right: 15px;
+     }
+  }
+  @media (max-width: 767px) {
+     .cardsize{
+        display: flex;
+        align-items: center;
+        justify-content: center;
      }
   }

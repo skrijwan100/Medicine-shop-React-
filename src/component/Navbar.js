@@ -28,7 +28,6 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
   const logout = (e) => {
     e.preventDefault();
     localStorage.removeItem("auth-token")
-    navigate("/login")
     showAlert("Logout Successfully", "success")
   }
   let loction = useLocation()
