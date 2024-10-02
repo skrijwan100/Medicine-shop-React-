@@ -28,3 +28,28 @@
     /* width: 26.333333% !important; */
     padding-left: 50px;
 }
+
+.quantity{
+    width: 27px;
+    margin-left: 10px;
+    /* background:linear-gradient(90deg, rgb(0, 187, 255), rgb(81, 220, 36)); */
+    background-color: aqua;
+    border: 1px solid greenyellow;
+    outline: none;
+}
+.orderbox{
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: 60vw;
+    height: 350px;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg,#127837, #24a2dc,#24dc7a);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.orderbox:hover{
+    transform: scale(1.06);
+}

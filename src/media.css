@@ -19,3 +19,9 @@
         justify-content: center;
      }
   }
+  @media (max-width: 767px) {
+   .orderbox{
+      height: 410px;
+      width: 310px;
+   }
+  }

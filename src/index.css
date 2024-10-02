@@ -115,7 +115,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hovercard{
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
 }
 .hovercard:hover{

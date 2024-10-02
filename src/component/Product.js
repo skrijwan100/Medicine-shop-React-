@@ -3,7 +3,9 @@ import { Link, useNavigate } from 'react-router-dom'
 // import img from "../Asset/pad-40.jpg"
 export default function Product({startLoader,showAlert}) {
     const naviget=useNavigate()
-    const handleclick= async(e,pname)=>{
+    const [quantities, setQuantities] = useState([]);
+
+    const handleclick= async(e,pname,quantity)=>{
         e.preventDefault();
         console.log(pname)
         if(!localStorage.getItem('auth-token')){
@@ -23,10 +25,11 @@ export default function Product({startLoader,showAlert}) {
                 "Content-Type": "application/json",
                 "auth-token":token,
             },
-            body: JSON.stringify({products:pname,quantity:5})
+            body: JSON.stringify({products:pname,quantity:quantity})
 
         })
         const data=  await reponce.json()
+        showAlert("order place successfully","success")
         console.log(data)
     } catch (error) {
             console.log(error)
@@ -46,6 +49,7 @@ export default function Product({startLoader,showAlert}) {
                 }
             })
             const data = await responce.json()
+            setQuantities(new Array(data.allproducts.length).fill(1));  
             console.log(data.allproducts)
             setproduct(data.allproducts)
 
@@ -53,6 +57,25 @@ export default function Product({startLoader,showAlert}) {
 
         fecthallproduct()
     }, [])
+
+    const increaseQuantity = (index) => {
+        setQuantities(prevQuantities => {
+            const newQuantities = [...prevQuantities];
+            newQuantities[index] += 1; // Increase quantity
+            return newQuantities;
+        });
+    };
+
+    const decreaseQuantity = (index) => {
+        setQuantities(prevQuantities => {
+            const newQuantities = [...prevQuantities];
+            if (newQuantities[index] > 0) {
+                newQuantities[index] -= 1; // Decrease quantity, ensure it doesn't go below 0
+            }
+            return newQuantities;
+        });
+    };
+
 
     return (
         <>
@@ -69,8 +92,8 @@ export default function Product({startLoader,showAlert}) {
                             <img src={product.ImgUrL} className="card-img-top" style={{height:"250px",width:"286px"}} alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title">{product.pname}</h5>
-                                <p className="card-text">{product.pdisc} <br /> <strong>pexpiryDate: </strong>{product.pexpiryDate} <br /> <strong>{`Prize: ${product.ppize}`}</strong></p>
-                               <button onClick={(e)=>handleclick(e,product.pname)} className='btn btn-warning'>Place Order</button>
+                                <p className="card-text">{product.pdisc} <br /> <strong>pexpiryDate: </strong>{product.pexpiryDate} <br /> <strong>{`Prize: ${product.ppize}`}</strong><br /><strong>quantity:</strong><button  onClick={() => decreaseQuantity(index)} className='btn btn-danger'>-</button><span className='mx-2' style={{fontSize:"22px"}}>{quantities[index]}</span><button onClick={() => increaseQuantity(index)} className='btn btn-light'>+</button></p>
+                               <button onClick={(e)=>handleclick(e,product.pname,quantities[index])} className='btn btn-warning'>Place Order</button>
                             </div>
                         </div>
 
