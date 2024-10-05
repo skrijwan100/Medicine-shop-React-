@@ -13,6 +13,6 @@ export default function Onlinedoctor({showAlert}) {
   return (
     <div>
       <h1>Online srvice page</h1>
-    </div>
+    </div>  
   )
 }

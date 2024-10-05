@@ -76,7 +76,6 @@ function App() {
         <Routes>
         <Route path="/" element={<Home startLoader={startLoader}  showAlert={showAlert} />} />
         <Route path="/about" element={<About startLoader={startLoader}/>} />
-        <Route path="/offer" element={<Offer  startLoader={startLoader}/>} />
         <Route path="/onlineservice" element={<Onlinedoctor startLoader={startLoader} showAlert={showAlert}/>} />
         <Route path="/cart" element={<Cart startLoader={startLoader} showAlert={showAlert}/>} />
         <Route path="/singup" element={<Singup showAlert={showAlert} startLoader={startLoader}/>} />

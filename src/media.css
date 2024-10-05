@@ -18,9 +18,7 @@
         align-items: center;
         justify-content: center;
      }
-  }
-  @media (max-width: 767px) {
-   .orderbox{
+     .orderbox{
       height: 410px;
       width: 310px;
    }
