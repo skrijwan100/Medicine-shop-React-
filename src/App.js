@@ -15,6 +15,8 @@ import Alert from './component/Alert';
 import "./media.css";
 import Modal from './component/Modal';
 import Finddoctor from './component/Finddoctor';
+import Pymentmodal from './component/Pymentmodal';
+
 // import Paymentmodal from './component/Paymentmodal';
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
     const [progress, setProgress] = useState(0);
     const[alert,setalert]=useState(null)
     const[modal,setmodal]=useState(null)
+    const[pymentmodal,setpaymentmodal]=useState(null)
   
 
     const showAlert=(msg,ty)=>{
@@ -40,13 +43,12 @@ function App() {
     
       })
     }
-    // const Paymentmodal=(title,src)=>{
-    //   setpaymodal({
-    //     title:title,
-    //     src:src
-    //   })
-         
-    // }
+   const showpymentmodal=(title)=>{
+    setpaymentmodal({
+      title:title,
+    })
+
+   }
   
     // Function to start the loader
     const startLoader = () => {
@@ -71,7 +73,7 @@ function App() {
         <Loder isLoading={isLoading} progress={progress}/>
         <Alert alert={alert}/>
         <Modal modal={modal}/>
-        {/* <Paymentmodal Paymentmodal={paymodal}/>    */}
+        <Pymentmodal pymentmodal={pymentmodal} />
 
     <div className='headbox  d-flex justify-content-center rounded-4 border border-black border-2 '>
       <Header/>
@@ -83,13 +85,12 @@ function App() {
     </div >
        
     <div className="content">
-
         <Routes>
         <Route path="/" element={<Home startLoader={startLoader}  showAlert={showAlert} />} />
         <Route path="/about" element={<About startLoader={startLoader}/>} />
         <Route path="/onlineservice" element={<Onlinedoctor startLoader={startLoader} showAlert={showAlert}/>} />
         <Route path="/finddoctor" element={<Finddoctor startLoader={startLoader} showAlert={showAlert}/>} />
-        <Route path="/cart" element={<Cart startLoader={startLoader} showAlert={showAlert}/>} />
+        <Route path="/cart" element={<Cart startLoader={startLoader} showAlert={showAlert} showpymentmodal={showpymentmodal} />} />
         <Route path="/singup" element={<Singup showAlert={showAlert} startLoader={startLoader}/>} />
         <Route path="/login" element={<Login showAlert={showAlert} startLoader={startLoader}/>} />
 

@@ -19,6 +19,7 @@ export default function Home(props) {
   return (
     <>
      {/* <Scarch/> */}
+     <Slidebar/>
       <Product startLoader={startLoader} showAlert={showAlert}/>
     </>
   )
