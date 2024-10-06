@@ -12,7 +12,7 @@ export default function Onlinedoctor({showAlert}) {
   },[])
   return (
     <div>
-      <h1>Online srvice page</h1>
+      <h1>YOUR BOOK DOCTOR</h1>
     </div>  
   )
 }

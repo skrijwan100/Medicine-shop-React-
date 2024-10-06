@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom';
-export default function Cart({ showAlert }) {
+export default function Cart({ showAlert}) {
   const [order, setorder] = useState([])
   const navigate = useNavigate()
   useEffect(() => {
@@ -45,6 +45,11 @@ export default function Cart({ showAlert }) {
       navigate("/cart")
     }, 400)
   }
+  // const handlepayment=(e)=>{
+  //   e.preventDefault();
+  //   showmodal("Scan this and make your payment","../Asset/Scanner.jpeg")
+
+  // }
 
 
   return (
@@ -57,7 +62,8 @@ export default function Cart({ showAlert }) {
             <strong>product name:</strong><span>{order.products}</span><br />
             <strong>quantity:</strong><span>{order.quantity}</span><br />
             <strong>Total Amount:</strong><span>{order.totalAmount}</span> <br />
-            <button onClick={(e) => handleclick(e, order._id)} className='btn btn-danger'>Delete Order</button>
+            <button onClick={(e) => handleclick(e, order._id)} className='btn btn-danger my-3'>Delete Order</button>
+            <button  className='btn btn-primary mx-3 my-3'>Online Payment </button>
           </div>
 
         </div>

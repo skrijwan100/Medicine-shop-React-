@@ -48,7 +48,10 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
                 <Link onClick={loction.pathname === "/" ? null : handleclick} className={`nav-link ${loction.pathname === "/" ? "underline" : ""}`} aria-current="page" to="/">HOME</Link>
               </li>
               <li className="nav-item">
-                <Link onClick={loction.pathname === "/onlineservice" ? null : handleclick} className={`nav-link ${loction.pathname === "/onlineservice" ? "underline" : ""}`} to="/onlineservice">ONLINE DOCTOR</Link>
+                <Link onClick={loction.pathname === "/finddoctor" ? null : handleclick} className={`nav-link ${loction.pathname === "/finddoctor" ? "underline" : ""}`} to="/finddoctor">FIND DOCTOR</Link>
+              </li>
+              <li className="nav-item">
+                <Link onClick={loction.pathname === "/onlineservice" ? null : handleclick} className={`nav-link ${loction.pathname === "/onlineservice" ? "underline" : ""}`} to="/onlineservice">YOUR BOOKING</Link>
               </li>
               <li className="nav-item">
                 <Link onClick={loction.pathname === "/cart" ? null : handleclick} className={`nav-link ${loction.pathname === "/cart" ? "underline" : ""}`} to="/cart">ORDER</Link>
