@@ -1,25 +1,39 @@
 @media (max-width: 430px) {
-    .main{
-        width: 95vw;
-    }
-    .inputstyle{
-        width: 90vw !important;
-    }
-  }
-  @media (max-width: 890px) {
-     .cardsize{
-        margin-left: 15px ;
-        margin-right: 15px;
-     }
-  }
-  @media (max-width: 767px) {
-     .cardsize{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     }
-     .orderbox{
+   .main {
+      width: 95vw;
+   }
+
+   .inputstyle {
+      width: 90vw !important;
+   }
+}
+
+@media (max-width: 890px) {
+   .cardsize {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
+}
+
+@media (max-width: 767px) {
+   .cardsize {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .orderbox {
       height: 410px;
       width: 310px;
    }
-  }
+   .responce{
+      height: 510px !important;
+
+   }
+}
+@media (max-width: 381px) {
+   .slide{
+      margin-top: 51px;
+   }
+
+}

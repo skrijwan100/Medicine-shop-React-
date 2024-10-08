@@ -40,7 +40,7 @@ export default function Cart({ showAlert,showpymentmodal}) {
     const data = await responce.json()
     // console.log(data.massage)
     showAlert("Suessfully delete", "success")
-    navigate("/")
+    navigate("/home")
     setTimeout(() => {
       navigate("/cart")
     }, 400)
@@ -54,9 +54,11 @@ export default function Cart({ showAlert,showpymentmodal}) {
 
 
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "30px", flexDirection: "column", backgroundColor:"black" }}>
+    <div style={{backgroundColor:"black"}}>
+      
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "30px", flexDirection:"column-reverse"}}>
       {order && order.length>0?(order.map((order, index) => (
-
+        
         <div className="orderbox my-3" key={index}>
           <img src={order.ImgUrL} alt="img" style={{ width: "250px", height: "250px", borderRadius: "30px" }} />
           <div className="information" style={{ fontSize: "20px" }}>
@@ -68,7 +70,8 @@ export default function Cart({ showAlert,showpymentmodal}) {
           </div>
 
         </div>
-      ))): <div style={{fontSize:"40px",color:"red"}}>No orders available.</div>}
+      ))): <div style={{fontSize:"40px",color:"red",height:"76.7vh"}}>No orders available.</div>}
     </div>
+      </div>
   )
 }

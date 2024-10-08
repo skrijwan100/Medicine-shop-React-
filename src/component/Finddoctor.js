@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import img from "../Asset/Scanner.jpeg"
+import img from "../Asset/doc1.jpg"
+import img1 from "../Asset/doc2.png"
+import img2 from "../Asset/doc3.jpg"
 
 
 
@@ -36,7 +38,6 @@ export default function Finddoctor({showAlert}) {
     const completeappoinetment = async(e) => {
         e.preventDefault();
         if (selectdoctor) {
-            // alert(`${selectdoctor.dname} ------ ${selectdoctor.doctorspiclity} ------ ${patient.pname} ----- ${patient.age}`);
             const url=`http://localhost:5000/api/doctorbook/addbook`
             const token= localStorage.getItem('auth-token')
             const responce= await fetch(url,{
@@ -69,6 +70,9 @@ export default function Finddoctor({showAlert}) {
     }
     return (
         <>
+        <img className='d-none' src={img} alt="" />
+        <img  className='d-none'  src={img1} alt="" />
+        <img  className='d-none' src={img2} alt="" />
             <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </button>

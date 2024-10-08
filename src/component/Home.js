@@ -19,7 +19,9 @@ export default function Home(props) {
   return (
     <>
      {/* <Scarch/> */}
+     <div className="slide" style={{width:"103vw",marginTop:"8px"}}>
      <Slidebar/>
+     </div>
       <Product startLoader={startLoader} showAlert={showAlert}/>
     </>
   )

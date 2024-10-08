@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import Swal from 'sweetalert2';
-
+import img from "../Asset/Scanner.jpeg"
 export default function Pymentmodal(props) {
+    // <img src={img} alt="" />
     return (
         useEffect(() => {
             if (props.pymentmodal) {
