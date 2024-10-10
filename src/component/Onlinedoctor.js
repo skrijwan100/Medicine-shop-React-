@@ -58,7 +58,7 @@ export default function Onlinedoctor({showAlert,showpymentmodal}) {
     {/* <img className='d-none' src={img} alt="" />
         <img  className='d-none'  src={img1} alt="" />
         <img  className='d-none' src={img2} alt="" /> */}
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "30px", flexDirection: "column", backgroundColor:"black" }}>
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "30px", flexDirection: "column", backgroundColor:"black",   height: "max-content"}}>
       {doctor && doctor.length>0?(doctor.map((doctor, index) => (
         
         <div className="orderbox responce my-3" key={index}>

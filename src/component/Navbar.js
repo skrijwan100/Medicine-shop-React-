@@ -57,7 +57,7 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
                 <Link onClick={loction.pathname === "/cart" ? null : handleclick} className={`nav-link ${loction.pathname === "/cart" ? "underline" : ""}`} to="/cart">ORDER</Link>
               </li>
               <li className="nav-item">
-                <Link onClick={loction.pathname === "/about" ? null : handleclick} className={`nav-link ${loction.pathname === "/about" ? "underline" : ""}`} to="/about">ABOUT US</Link>
+                <Link onClick={loction.pathname === "/about" ? null : handleclick} className={`nav-link ${loction.pathname === "/about" ? "underline" : ""}`} to="/about">DEVOLOPER</Link>
               </li>
             </ul>
           </div>

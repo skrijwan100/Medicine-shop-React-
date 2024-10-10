@@ -37,3 +37,25 @@
    }
 
 }
+@media (max-width: 936px) {
+   .boxAbout{
+     height: 550px !important;
+     margin-top: 80px;
+   }
+   .aboutbody{
+      height:fit-content !important;
+   }
+
+}
+@media (max-width: 475px) {
+   .boxAbout{
+     height: 640px !important;
+   }
+
+}
+@media (max-width: 405px) {
+   .boxAbout{
+     margin-top: 100px;
+   }
+
+}

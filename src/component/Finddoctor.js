@@ -100,7 +100,7 @@ export default function Finddoctor({showAlert}) {
                     </div>
                 </div>
             </div>
-            <div className='row' style={{ backgroundColor: "#1f1e1e", color: "black", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className='row' style={{  color: "black", display: "flex", alignItems: "center", justifyContent: "center" }}>
 
                 {doctor.map((doctor, index) => (
                     <div className='col-md-4 my-5 cardsize' key={doctor.id || index} >

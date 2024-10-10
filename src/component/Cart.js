@@ -54,7 +54,7 @@ export default function Cart({ showAlert,showpymentmodal}) {
 
 
   return (
-    <div style={{backgroundColor:"black"}}>
+    <div>
       
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "30px", flexDirection:"column-reverse"}}>
       {order && order.length>0?(order.map((order, index) => (
@@ -67,10 +67,10 @@ export default function Cart({ showAlert,showpymentmodal}) {
             <strong>Total Amount:</strong><span>{order.totalAmount}</span> <br />
             <button onClick={(e) => handleclick(e, order._id)} className='btn btn-danger my-3'>Delete Order</button>
             <button onClick={showscanner} className='btn btn-primary mx-3 my-3'>Online Payment </button>
-          </div>
+          </div> 
 
         </div>
-      ))): <div style={{fontSize:"40px",color:"red",height:"76.7vh"}}>No orders available.</div>}
+      ))): <div style={{fontSize:"40px",color:"red",height:"76.7vh"}}>No orders palce.</div>}
     </div>
       </div>
   )
