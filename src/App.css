@@ -61,8 +61,24 @@
     padding: 20px;
     transition: all 0.4s ease-in-out;
     background: linear-gradient(90deg, #da61ff, #0062ff, #da61ff);
-  
+    
 }
 .boxAbout:hover{
+    transform: scale(1.05);
+}
+
+/* admin page */
+.adminbox{
+    height: 350px;
+    width: 350px;
+    background: linear-gradient(45deg, #35f5f5, #fa61ff, #00ffb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 18px;
+}
+.adminbox:hover{
     transform: scale(1.05);
 }

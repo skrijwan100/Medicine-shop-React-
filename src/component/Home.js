@@ -23,6 +23,7 @@ export default function Home(props) {
      <Slidebar/>
      </div>
       <Product startLoader={startLoader} showAlert={showAlert}/>
+      
     </>
   )
 }

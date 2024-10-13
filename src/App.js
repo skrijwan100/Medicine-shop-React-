@@ -16,6 +16,8 @@ import "./media.css";
 import Modal from './component/Modal';
 import Finddoctor from './component/Finddoctor';
 import Pymentmodal from './component/Pymentmodal';
+import Adminlogin from './component/Adminlogin';
+import Mainadminpage from './component/Mainadminpage';
 
 
 
@@ -92,6 +94,8 @@ function App() {
             <Route path="/cart" element={<Cart startLoader={startLoader} showAlert={showAlert} showpymentmodal={showpymentmodal} />} />
             <Route path="/singup" element={<Singup showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/login" element={<Login showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/adminlogin" element={<Adminlogin showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/mainadminpage" element={<Mainadminpage showAlert={showAlert} startLoader={startLoader} />} />
 
 
           </Routes>

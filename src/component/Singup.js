@@ -38,7 +38,7 @@ export default function Singup(props) {
 
     }
     return (
-        <div style={{ height: "500px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ height: "500px", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor:"#0f0e0e" }}>
             <div className="main" style={{ display: "flex", flexDirection: "column", color: "#00ff00", height: "450px" }}>
                 <h1><center>Singup</center></h1>
                 <form onSubmit={handleclick}>

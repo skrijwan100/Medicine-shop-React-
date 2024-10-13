@@ -35,7 +35,7 @@ export default function Login(props) {
 
     }
   return (
-    <div style={{height:"500px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"#f3f4f6"}}>
+    <div style={{height:"500px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"#0f0e0e"}}>
     <div className="main" style={{display:"flex",flexDirection:"column",color:"#00ff00",height: "350px"}}>
         <h1><center>Login</center></h1>
         <form onSubmit={handleclick}>

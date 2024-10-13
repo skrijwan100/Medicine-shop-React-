@@ -7,6 +7,7 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
   const navigate = useNavigate()
   const handleclick = () => {
     startLoader()
+    localStorage.removeItem("admin-token")
   }
 
   const handlemodal = async () => {
@@ -28,6 +29,8 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
   const logout = (e) => {
     e.preventDefault();
     localStorage.removeItem("auth-token")
+    localStorage.removeItem("admin-token")
+
     showAlert("Logout Successfully", "success")
   }
   let loction = useLocation()
@@ -61,7 +64,7 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
               </li>
             </ul>
           </div>
-          {!localStorage.getItem('auth-token') ? <div><Link to="/login"><button onClick={loction.pathname === "/login" ? null : handleclick} className='btn btn-primary mx-2'>Login</button></Link>
+          {!localStorage.getItem('auth-token')? <div><Link to="/login"><button onClick={loction.pathname === "/login" ? null : handleclick} className='btn btn-primary mx-2'>Login</button></Link>
             <Link to="/singup">  <button onClick={loction.pathname === "/singup" ? null : handleclick} className='btn btn-primary'>Singup</button></Link></div> :<div style={{ display: "flex" }}><button onClick={logout} className='btn btn-primary'>logout</button> <div className="user mx-3" onClick={handlemodal}> <lord-icon
               src="https://cdn.lordicon.com/kdduutaw.json"
               trigger="hover"

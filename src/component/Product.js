@@ -75,7 +75,10 @@ export default function Product({startLoader,showAlert}) {
             return newQuantities;
         });
     };
-
+const adminpage=()=>{
+    startLoader()
+    naviget("/adminlogin")
+}
 
     return (
         <>
@@ -83,7 +86,7 @@ export default function Product({startLoader,showAlert}) {
 
             {/* <img src={img}alt="" /> */}
             </div>
-            <div className='row'  style={{ backgroundColor:"#1f1e1e", color: "black",display:"flex", alignItems:"center", justifyContent:"center" }}>
+            <div className='row'  style={{ backgroundColor:"#0f0e0e", color: "black",display:"flex", alignItems:"center", justifyContent:"center" }}>
                 {product.map((product, index) => (
 
                     <div className='col-md-4 my-5 cardsize'  key={product.id || index} >
@@ -99,6 +102,7 @@ export default function Product({startLoader,showAlert}) {
 
                     </div>
                 ))}
+                <footer style={{display:"flex",justifyContent:"center"}}> <button onClick={adminpage} className='btn btn-primary my-2'>Admin login</button></footer>
             </div>
         </>
 
