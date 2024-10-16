@@ -18,6 +18,7 @@ import Finddoctor from './component/Finddoctor';
 import Pymentmodal from './component/Pymentmodal';
 import Adminlogin from './component/Adminlogin';
 import Mainadminpage from './component/Mainadminpage';
+import Addproduct from './component/Addproduct';
 
 
 
@@ -96,10 +97,11 @@ function App() {
             <Route path="/login" element={<Login showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/adminlogin" element={<Adminlogin showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/mainadminpage" element={<Mainadminpage showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/addproduct" element={<Addproduct showAlert={showAlert} startLoader={startLoader} />} />
 
 
           </Routes>
-        </div>
+        </div> 
       </Router>
     </>
   );
