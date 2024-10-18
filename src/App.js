@@ -19,6 +19,7 @@ import Pymentmodal from './component/Pymentmodal';
 import Adminlogin from './component/Adminlogin';
 import Mainadminpage from './component/Mainadminpage';
 import Addproduct from './component/Addproduct';
+import Updateproduct from "./component/Updateproduct";
 
 
 
@@ -98,6 +99,9 @@ function App() {
             <Route path="/adminlogin" element={<Adminlogin showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/mainadminpage" element={<Mainadminpage showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/addproduct" element={<Addproduct showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/updatedelete" element={<Updateproduct showAlert={showAlert} startLoader={startLoader} />} />
+           
+            
 
 
           </Routes>

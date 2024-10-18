@@ -66,7 +66,7 @@ export default function Addproduct({showAlert}) {
 
                     </div>
                     <div className="password my-2">
-                        <input type="text" className='inputsize' placeholder="Expeiry date (dd-mm-yyyy)" style={{ outline: "none" }} name="expiryDate"  onChange={onchange} value={setproduct.expiryDate} required />
+                        <input type="text" className='inputsize' placeholder="Expeiry date (dd-mm-yyyy)" style={{ outline: "none" }} name="expiryDate"  onChange={onchange} value={setproduct.expiryDate} required   />
 
                     </div>
                     <div className=" my-2">
