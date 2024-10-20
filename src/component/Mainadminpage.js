@@ -22,6 +22,18 @@ export default function Mainadminpage({startLoader,showAlert}) {
     naviget("/updatedelete")
 
   }
+  const adddoctor=(e)=>{
+    e.preventDefault();
+    startLoader()
+    naviget("/adddoctor")
+
+
+  }
+  const updatedoc=(e)=>{
+    e.preventDefault();
+    startLoader()
+   naviget("/updatedeletedoctor") 
+  }
   return (
     <div className='mainadmin' style={{display:"flex",flexDirection:"column", flexWrap:"wrap",alignItems:"center",justifyContent:"center",width:"100vw",}}>
      <div className="row-1" style={{display:'flex',flexWrap:"wrap",alignItems:"center",justifyContent:"center"}}>
@@ -30,9 +42,9 @@ export default function Mainadminpage({startLoader,showAlert}) {
       <div className='adminbox mx-3 my-3'><button onClick={updatedelte} className='btn btn-danger'>Delete product</button></div>
      </div>
      <div className="row-2" style={{display:"flex",flexWrap:"wrap",alignItems:"center",justifyContent:"center"}}>
-     <div className='adminbox mx-3 my-3'><button className='addbtn'>Add Doctor</button></div>
-      <div className='adminbox mx-3 my-3'><button className='updatebtn'>Update Doctor</button></div>
-      <div className='adminbox mx-3 my-3'><button className='btn btn-danger'>Delete Doctor</button></div>
+     <div className='adminbox mx-3 my-3'><button onClick={adddoctor} className='addbtn'>Add Doctor</button></div>
+      <div className='adminbox mx-3 my-3'><button onClick={updatedoc} className='updatebtn'>Update Doctor</button></div>
+      <div className='adminbox mx-3 my-3'><button onClick={updatedoc} className='btn btn-danger'>Delete Doctor</button></div>
     </div>
     </div>
   )

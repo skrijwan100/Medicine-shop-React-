@@ -20,6 +20,8 @@ import Adminlogin from './component/Adminlogin';
 import Mainadminpage from './component/Mainadminpage';
 import Addproduct from './component/Addproduct';
 import Updateproduct from "./component/Updateproduct";
+import Adddoctor from './component/Adddoctor';
+import Upadtedeldoctor from './component/Upadtedeldoctor';
 
 
 
@@ -100,6 +102,8 @@ function App() {
             <Route path="/mainadminpage" element={<Mainadminpage showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/addproduct" element={<Addproduct showAlert={showAlert} startLoader={startLoader} />} />
             <Route path="/updatedelete" element={<Updateproduct showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/adddoctor" element={<Adddoctor showAlert={showAlert} startLoader={startLoader} />} />
+            <Route path="/updatedeletedoctor" element={<Upadtedeldoctor showAlert={showAlert} startLoader={startLoader} />} />
            
             
 
