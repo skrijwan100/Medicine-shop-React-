@@ -3,9 +3,6 @@ import img from "../Asset/doc1.jpg"
 import img1 from "../Asset/doc2.png"
 import img2 from "../Asset/doc3.jpg"
 
-
-
-
 export default function Finddoctor({showAlert}) {
     const [doctor, setdoctor] = useState([])
     const [patient, setpatient] = useState({ pname: "", age: "" })

@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 
 export default function Addproduct({showAlert}) {
+    useEffect(()=>{
+        const token= localStorage.getItem("admin-token")
+        if(!token){
+          showAlert("Need admin login","error")
+          naviget("/adminlogin")
+        }
+    
+      },[])
     const [product, setproduct] = useState({ pname: "", prize: "", stock: "", expiryDate: "", disc: "", ImgUrL: "" })
     const onchange = (e) => {
         setproduct({ ...product, [e.target.name]: e.target.value })
