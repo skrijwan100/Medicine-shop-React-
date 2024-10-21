@@ -9,6 +9,11 @@ export default function Upadtedeldoctor({showAlert}) {
     const [doctordetiles,setdoctordetiles]=useState({Spiclity:"",dname:"",time:"",fees:""})
     const naviget= useNavigate()
     useEffect(() => {
+        const token = localStorage.getItem("admin-token")
+    if(!token){
+      showAlert("Login Frist","error")
+      naviget("/adminlogin")
+    }
         const fecthalldoctor = async () => {
             const url = `http://localhost:5000/api/doctor/fecthalldoctor`
             const responce = await fetch(url, {
