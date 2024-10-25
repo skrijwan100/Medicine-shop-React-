@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Addproduct({showAlert}) {
+
     useEffect(()=>{
         const token= localStorage.getItem("admin-token")
         if(!token){
