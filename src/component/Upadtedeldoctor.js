@@ -98,7 +98,7 @@ export default function Upadtedeldoctor({showAlert}) {
         <img  className='d-none' src={img2} alt="" />
         <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
-            </button>
+        </button>
 
 
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

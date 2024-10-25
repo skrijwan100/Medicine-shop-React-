@@ -95,7 +95,7 @@ const adminpage=()=>{
                             <img src={product.ImgUrL} className="card-img-top" style={{height:"250px",width:"286px"}} alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title">{product.pname}</h5>
-                                <p className="card-text">{product.pdisc} <br /> <strong>pexpiryDate: </strong>{product.pexpiryDate} <br /> <strong>{`Prize: ${product.ppize}`}</strong><br /><strong>quantity:</strong><button  onClick={() => decreaseQuantity(index)} className='btn btn-danger'>-</button><span className='mx-2' style={{fontSize:"22px"}}>{quantities[index]}</span><button onClick={() => increaseQuantity(index)} className='btn btn-light'>+</button></p>
+                                <p className="card-text">{product.pdisc} <br /> <strong>ExpiryDate: </strong>{product.pexpiryDate} <br /> <strong>{`Prize: ${product.ppize}`}</strong><br /><strong>quantity:</strong><button  onClick={() => decreaseQuantity(index)} className='btn btn-danger'>-</button><span className='mx-2' style={{fontSize:"22px"}}>{quantities[index]}</span><button onClick={() => increaseQuantity(index)} className='btn btn-light'>+</button></p>
                                <button onClick={(e)=>handleclick(e,product.pname,quantities[index])} className='btn btn-warning'>Place Order</button>
                             </div>
                         </div>
