@@ -18,7 +18,7 @@ export default function Addproduct({showAlert}) {
         e.preventDefault();
         const url =`http://localhost:5000/api/products/addproducts`
        const token = localStorage.getItem("admin-token")
-       console.log(token)
+    //    console.log(token)
         const responce=await fetch(url,{
             method:"POST",
             headers:{
@@ -28,7 +28,7 @@ export default function Addproduct({showAlert}) {
             body:JSON.stringify({pname:product.pname,ppize:product.prize,pstock:product.stock,pexpiryDate:product.expiryDate,pdisc:product.disc,ImgUrL:product.ImgUrL})
         })
         const data= await responce.json()
-        console.log(data)
+        // console.log(data)
         if(data){
 
             showAlert("Product add Successfull","success")

@@ -10,7 +10,8 @@ export default function Adminlogin({ showAlert,startLoader}) {
     }
     const handleclick = (e) => {
         e.preventDefault();
-        if (adminauth.email === "admin1@gmail.com" && adminauth.password === "admin123") {
+        console.log(process.env.admin_gamil)
+        if (adminauth.email ==="admin1@gmail.com" && adminauth.password === "admin123") {
             showAlert("Admin login Successfully", "success");
             localStorage.setItem("admin-token","iamskrijwaniamadmin")
             startLoader()
@@ -47,7 +48,7 @@ export default function Adminlogin({ showAlert,startLoader}) {
                         </lord-icon>
                     </div>
                     <div className="login" style={{ display: "flex", justifyContent: "center" }}>
-                        <button onClick={handleclick} className='btn btn-primary' type="submit" id="button">Admin Login</button>
+                        <button disabled={adminauth.email===""?true:false} onClick={handleclick} className='btn btn-primary' type="submit" id="button">Admin Login</button>
                     </div>
                 </form>
 

@@ -25,6 +25,7 @@ import Upadtedeldoctor from './component/Upadtedeldoctor';
 
 
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
