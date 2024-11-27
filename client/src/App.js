@@ -3,7 +3,7 @@ import About from './component/About';
 import Header from './component/Header';
 import Navbar from './component/Navbar';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import Offer from './component/Offer';
+
 import Onlinedoctor from './component/Onlinedoctor';
 import Home from './component/Home';
 import Cart from './component/Cart';

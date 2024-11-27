@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import Swal from 'sweetalert2';
 export default function Modal(props) {
   return (
