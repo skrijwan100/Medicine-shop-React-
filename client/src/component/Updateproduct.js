@@ -12,7 +12,7 @@ export default function Product({startLoader,showAlert}) {
                 showAlert("Login frist","error")
             }
             // e.preventDefault();
-            const url = `http://localhost:5000/api/products/getallproducts`
+            const url = `${process.env.REACT_APP_backend_url}/api/products/getallproducts`
             const responce = await fetch(url, {
                 method: 'GET',
                 headers: {
@@ -29,7 +29,7 @@ export default function Product({startLoader,showAlert}) {
     }, [])
     const handledelete=async(e,id)=>{
       e.preventDefault();
-      const url=`http://localhost:5000/api/products/deleteproduct/${id}`
+      const url=`${process.env.REACT_APP_backend_url}/api/products/deleteproduct/${id}`
       const token= localStorage.getItem("admin-token")
       const reponce = await fetch(url,{
         method:"DELETE",
@@ -64,7 +64,7 @@ const onchange=(e)=>{
 
 const handleupdate=async (e)=>{
     e.preventDefault();
-    const url =`http://localhost:5000/api/products/updateproduct/${pdetiles.id}`
+    const url =`${process.env.REACT_APP_backend_url}/api/products/updateproduct/${pdetiles.id}`
     const token = localStorage.getItem("admin-token")
     const responce= await fetch(url,{
         method:"PUT",

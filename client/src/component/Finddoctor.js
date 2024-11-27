@@ -9,7 +9,7 @@ export default function Finddoctor({showAlert}) {
     const [selectdoctor, setselectdoctor] = useState(null)
     useEffect(() => {
         const fecthalldoctor = async () => {
-            const url = `http://localhost:5000/api/doctor/fecthalldoctor`
+            const url = `${process.env.REACT_APP_backend_url}/api/doctor/fecthalldoctor`
             const responce = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -35,7 +35,7 @@ export default function Finddoctor({showAlert}) {
     const completeappoinetment = async(e) => {
         e.preventDefault();
         if (selectdoctor) {
-            const url=`http://localhost:5000/api/doctorbook/addbook`
+            const url=`${process.env.REACT_APP_backend_url}/api/doctorbook/addbook`
             const token= localStorage.getItem('auth-token')
             const responce= await fetch(url,{
                 method:"POST",

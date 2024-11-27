@@ -10,7 +10,7 @@ export default function Cart({ showAlert,showpymentmodal}) {
       showAlert("login or singup frist", "error")
     }
     const fecthorder = async () => {
-      const url = `http://localhost:5000/api/order/fecthorder`
+      const url = `${process.env.REACT_APP_backend_url}/api/order/fecthorder`
       const token = localStorage.getItem("auth-token")
       const reponce = await fetch(url, {
         method: 'POST',
@@ -28,7 +28,7 @@ export default function Cart({ showAlert,showpymentmodal}) {
   }, [])
   const handleclick = async (e, id) => {
     e.preventDefault();
-    const url = `http://localhost:5000/api/order/deleteorder/${id}`
+    const url = `${process.env.REACT_APP_backend_url}/api/order/deleteorder/${id}`
     const token = localStorage.getItem('auth-token')
     const responce = await fetch(url, {
       method: 'DELETE',

@@ -17,7 +17,7 @@ export default function Adddoctor({showAlert}) {
   }
   const handlesubmit=async(e)=>{
     e.preventDefault();
-    const url=`http://localhost:5000/api/doctor/adddoctor`
+    const url=`${process.env.REACT_APP_backend_url}/api/doctor/adddoctor`
    const token= localStorage.getItem("admin-token")
    const responce= await fetch (url,{
     method:"POST",

@@ -12,7 +12,7 @@ export default function Singup(props) {
     }
     const handleclick = async (e) => {
         e.preventDefault();
-        const url = `http://localhost:5000/api/userauth/register`
+        const url = `${process.env.REACT_APP_backend_url}/api/userauth/register`
         const responce = await fetch(url, {
             method: 'POST',
             headers: {
@@ -21,7 +21,7 @@ export default function Singup(props) {
             body: JSON.stringify({ name: userauth.username, email: userauth.email, password: userauth.password, address: userauth.address, phone: userauth.phone })
         })
         const data = await responce.json()
-        console.log(data)
+        // console.log(data)
         if (data.user == "Successfully") {
             localStorage.setItem('auth-token', data.authtoken)
             navigate("/")

@@ -11,7 +11,7 @@ export default function Navbar({ startLoader, showAlert, showmodal }) {
   }
 
   const handlemodal = async () => {
-    const url = `http://localhost:5000/api/userauth/getuser`
+    const url = `${process.env.REACT_APP_backend_url}/api/userauth/getuser`
     const token = localStorage.getItem('auth-token')
     const responce = await fetch(url, {
       method: 'POST',

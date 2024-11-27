@@ -16,7 +16,7 @@ export default function Addproduct({showAlert}) {
     }
     const handlesubmit=async(e)=>{
         e.preventDefault();
-        const url =`http://localhost:5000/api/products/addproducts`
+        const url =`${process.env.REACT_APP_backend_url}/api/products/addproducts`
        const token = localStorage.getItem("admin-token")
     //    console.log(token)
         const responce=await fetch(url,{

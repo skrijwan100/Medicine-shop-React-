@@ -13,7 +13,8 @@ export default function Login(props) {
     }
     const handleclick = async(e)=>{
         e.preventDefault();
-        const url = `http://localhost:5000/api/userauth/login`
+        // console.log(process.env.REACT_APP_backend_url)
+        const url = `${process.env.REACT_APP_backend_url}/api/userauth/login`
        const responce = await fetch(url,{
         method:'POST',
         headers:{
@@ -22,7 +23,7 @@ export default function Login(props) {
         body:JSON.stringify({email:userauth.email,password:userauth.password})
        })
        const data = await responce.json()
-       console.log(data)
+    //    console.log(data)
        if(data.massage=="Successfully"){
         localStorage.setItem('auth-token',data.authtoken)
         showAlert("Login Successfully","success")

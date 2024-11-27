@@ -14,7 +14,7 @@ export default function Product({startLoader,showAlert}) {
             naviget("/login")
             return;
         }
-        const url=`http://localhost:5000/api/order/addorder`;
+        const url=`${process.env.REACT_APP_backend_url}/api/order/addorder`;
         const token=localStorage.getItem('auth-token')
         try {
             
@@ -41,7 +41,7 @@ export default function Product({startLoader,showAlert}) {
     useEffect(() => {
         const fecthallproduct = async (e) => {
             // e.preventDefault();
-            const url = `http://localhost:5000/api/products/getallproducts`
+            const url = `${process.env.REACT_APP_backend_url}/api/products/getallproducts`
             const responce = await fetch(url, {
                 method: 'GET',
                 headers: {

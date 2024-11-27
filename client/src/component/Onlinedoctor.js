@@ -13,7 +13,7 @@ export default function Onlinedoctor({showAlert,showpymentmodal}) {
       showAlert("login or singup frist","error")
     }
     const fecthbook= async()=>{
-      const url= `http://localhost:5000/api/doctorbook/fecthbook`
+      const url= `${process.env.REACT_APP_backend_url}/api/doctorbook/fecthbook`
       const token=localStorage.getItem("auth-token")
       const responce = await fetch(url,{
         method:'POST',
@@ -30,7 +30,7 @@ export default function Onlinedoctor({showAlert,showpymentmodal}) {
   },[])
   const hendleclick=async(e,id)=>{
     e.preventDefault();
-    const url= `http://localhost:5000/api/doctorbook/deletebooking/${id}`
+    const url= `${process.env.REACT_APP_backend_url}/api/doctorbook/deletebooking/${id}`
     const token = localStorage.getItem('auth-token')
     const responce= await fetch(url,{
       method:'DELETE',

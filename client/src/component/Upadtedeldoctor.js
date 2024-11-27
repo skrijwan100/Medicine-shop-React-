@@ -15,7 +15,7 @@ export default function Upadtedeldoctor({showAlert}) {
       naviget("/adminlogin")
     }
         const fecthalldoctor = async () => {
-            const url = `http://localhost:5000/api/doctor/fecthalldoctor`
+            const url = `${process.env.REACT_APP_backend_url}/api/doctor/fecthalldoctor`
             const responce = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -32,7 +32,7 @@ export default function Upadtedeldoctor({showAlert}) {
     }, [])
    
     const handledelete=async(e,id)=>{
-      const url=`http://localhost:5000/api/doctor/deletedoctor/${id}`
+      const url=`${process.env.REACT_APP_backend_url}/api/doctor/deletedoctor/${id}`
       const token= localStorage.getItem("admin-token")
       const responce = await fetch(url,{
         method:'DELETE',
@@ -66,7 +66,7 @@ export default function Upadtedeldoctor({showAlert}) {
   
     const handleupdate=async(e)=>{
         e.preventDefault();
-       const  url=`http://localhost:5000/api/doctor/updatedoctor/${doctordetiles.id}`
+       const  url=`${process.env.REACT_APP_backend_url}/api/doctor/updatedoctor/${doctordetiles.id}`
         const token= localStorage.getItem("admin-token")
         const responce= await fetch(url,{
             method:"PUT",

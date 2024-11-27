@@ -10,8 +10,7 @@ export default function Adminlogin({ showAlert,startLoader}) {
     }
     const handleclick = (e) => {
         e.preventDefault();
-        console.log(process.env.admin_gamil)
-        if (adminauth.email ==="admin1@gmail.com" && adminauth.password === "admin123") {
+        if (adminauth.email ===process.env.REACT_APP_admin_gamil && adminauth.password === process.env.REACT_APP_admin_password) {
             showAlert("Admin login Successfully", "success");
             localStorage.setItem("admin-token","iamskrijwaniamadmin")
             startLoader()
